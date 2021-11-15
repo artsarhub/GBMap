@@ -11,6 +11,7 @@ import CoreLocation
 import RealmSwift
 
 class ViewController: UIViewController {
+    // ЗАГЛУШКА ДЛЯ ДЗ 3
     
     // MARK: - Private vars
     
