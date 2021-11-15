@@ -14,6 +14,7 @@
 		AC061B1F27351F49009D0D3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC061B1D27351F49009D0D3B /* Main.storyboard */; };
 		AC061B2127351F4A009D0D3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC061B2027351F4A009D0D3B /* Assets.xcassets */; };
 		AC061B2427351F4A009D0D3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC061B2227351F4A009D0D3B /* LaunchScreen.storyboard */; };
+		AC920E14273C4AA1001E6CC7 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC920E13273C4AA1001E6CC7 /* Track.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		AC061B2027351F4A009D0D3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC061B2327351F4A009D0D3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC061B2527351F4A009D0D3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC920E13273C4AA1001E6CC7 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		AC061B1627351F49009D0D3B /* GBMap */ = {
 			isa = PBXGroup;
 			children = (
+				AC920E12273C4A82001E6CC7 /* Model */,
 				AC061B1727351F49009D0D3B /* AppDelegate.swift */,
 				AC061B1927351F49009D0D3B /* SceneDelegate.swift */,
 				AC061B1B27351F49009D0D3B /* ViewController.swift */,
@@ -74,13 +77,20 @@
 			path = GBMap;
 			sourceTree = "<group>";
 		};
+		AC920E12273C4A82001E6CC7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC920E13273C4AA1001E6CC7 /* Track.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C21638C11A571978D5EFC3CD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				9832526EBD9542B41D285435 /* Pods-GBMap.debug.xcconfig */,
 				4995C061A139E34D78EF492E /* Pods-GBMap.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -104,6 +114,7 @@
 				AC061B1127351F49009D0D3B /* Frameworks */,
 				AC061B1227351F49009D0D3B /* Resources */,
 				E85924E9D6DF056DF2D270D8 /* [CP] Copy Pods Resources */,
+				DF2E68288ED4170EC22C6750 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,6 +194,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DF2E68288ED4170EC22C6750 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GBMap/Pods-GBMap-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GBMap/Pods-GBMap-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GBMap/Pods-GBMap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E85924E9D6DF056DF2D270D8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -210,6 +238,7 @@
 				AC061B1C27351F49009D0D3B /* ViewController.swift in Sources */,
 				AC061B1827351F49009D0D3B /* AppDelegate.swift in Sources */,
 				AC061B1A27351F49009D0D3B /* SceneDelegate.swift in Sources */,
+				AC920E14273C4AA1001E6CC7 /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +391,8 @@
 				DEVELOPMENT_TEAM = 2NNAXW3732;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GBMap/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "For example";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "For example";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -391,6 +422,8 @@
 				DEVELOPMENT_TEAM = 2NNAXW3732;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GBMap/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "For example";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "For example";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
